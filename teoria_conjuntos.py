@@ -57,7 +57,7 @@ def menu():
 
         
         elif opcion == 2:
-            print("ejercicio3()")
+            ejercicio3()
             arch_trazas.writelines("Se ejecuto la opcion: "+ str(opcion) + " " + datetime.now().strftime(f"%d/%m/%Y %H:%M:%S") + "\n")
             
         elif opcion == 3:
@@ -167,5 +167,38 @@ def tabla_verdad(conjunto1,conjunto2,conjunto3):
     print("RESULTADOS DE LA CLASIFICACIÓN:")
     print(f"Usuarios Críticos: {criticos}")
     print(f"Usuarios No Críticos: {no_criticos}")
-
+    
+def ejercicio3():
+    m=[
+    [120,150,100],
+    [200,180,220],
+    [90,110,95]
+    ]
+    f1=0
+    f2=0
+    f3=0
+    s1=0
+    s2=0
+    s3=0
+    for i in range(len(m)):
+            f1+=m[i][0]
+            f2+=m[i][1]
+            f3+=m[i][2]
+    promedio1=f1/3
+    promedio2=f2/3
+    promedio3=f3/3
+    print('el tiempo promedio de la primer funcion es',promedio1)
+    print('el tiempo promedio de la segunda funcion es',promedio2)
+    print('el tiempo promedio de la tercer funcion es',promedio3)
+    for i in range(len(m)):
+        s1+=m[0][i]
+        s2+=m[1][i]
+        s3+=m[2][i]
+    promedioa=s1/3
+    promediob=s2/3
+    promedioc=s3/3
+    print('el tiempo promedio del primer servidor es',promedioa)
+    print('el tiempo promedio del segundo servidor es',promediob)
+    print('el tiempo promedio del tercer servidor es',promedioc)
+    
 menu()
