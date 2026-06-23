@@ -68,7 +68,7 @@ def menu():
             print("El numero ingresado no es una opcion disponible.")
             arch_trazas.writelines("el usuario ingreso una opcion incorrecta" + " " + datetime.now().strftime(f"%d/%m/%Y %H:%M:%S") + "\n")
 
-def interseccion(conjunto1,conjunto2):
+def interseccion(conjunto1,conjunto2): #funcion para saber los usarios que uitlizan ambas plataformas 
     vector_interseccion=[]
     for i in range(len(conjunto2)):
         for j in range(len(conjunto1)):
@@ -76,7 +76,7 @@ def interseccion(conjunto1,conjunto2):
                 vector_interseccion.append(conjunto2[i])
     print('Los usuarios que utilizan ambas plataformas son: ',vector_interseccion)
 
-def union(conjunto1,conjunto2):
+def union(conjunto1,conjunto2): #funcion para saber que usarios usan la API Y WEB
     conjuntounion = conjunto1
     for i in range(len(conjunto2)):
         controlador = 0
